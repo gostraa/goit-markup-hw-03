@@ -416,10 +416,10 @@ display:block;
 
 
 
-/* галерея */
 
 
-.projects-card.list{
+/* 
+ .projects-card.list{
    display:flex;
    flex-wrap: wrap;
     padding-top: 0;
@@ -458,14 +458,14 @@ min-width: 69px;
 }
 
 
-/* карточки-ссылки проектов */
+
 
 
 .project-card-photo{
     
     display: block;
     max-width: 100%;
-    /* margin-bottom: 32px; */
+    
 }
 
 .project-card-content{
@@ -516,4 +516,105 @@ min-width: 69px;
    
     border-top:none;
     
+}  */
+
+
+
+ .projects-card.list{
+   display:flex;
+   flex-wrap: wrap;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: -24px;
+    margin-top: -48px;
+    
 }
+
+.button{
+ display: inline-block;
+background-color: var(--third-bg-color);
+font-family: "Roboto", sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em ;
+text-align: center;
+color: var(--accent);
+cursor:pointer;
+text-align: center;
+padding: 12px 24px 12px 24px;
+border-radius: 4px;
+border: 1px solid var(--elements-border-color);
+min-width: 69px;
+
+
+
+}
+
+.button:hover,.button:focus{
+     color: var(--primary-bg-color);
+    background-color:var(--accent-two);
+    box-shadow: var(--active-button-shadow);
+    
+}
+
+
+
+
+
+.project-card-photo{
+    
+    display: block;
+    max-width: 100%;
+    
+}
+
+.project-card-content{
+    flex-basis: calc(100% / 3 - var(--card-set-gap-left));
+    width: 360px;
+    
+
+    margin-left: var(--card-set-gap-left);
+    margin-top: var(--card-set-gap-top);
+    background-color: var(--primary-bg-color);
+   
+    
+}
+
+
+
+
+
+
+
+.projects-tittle{
+   
+    color: var(--primary-text-color);
+     font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;  
+     letter-spacing: 0.02em;
+     
+     margin-bottom:8px;
+
+}
+.projects-category {
+    
+    color: var(--secondary-text-color);
+    
+   font-size: 16px;
+   line-height: 1.5;
+   letter-spacing: 0.02em;
+  
+
+}
+
+.card-info{
+    padding: 32px 16px 32px 16px;
+    
+    
+    border: 1px solid var(--elements-border-color);
+   
+    border-top:none;
+    
+} 
