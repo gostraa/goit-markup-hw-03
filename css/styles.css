@@ -13,7 +13,12 @@
     --third-bg-color : #F4F4FD;
     --accent:#4D5AE5;
     --accent-two:#404bbf;
-
+    --button-shadow-color:rgba(0, 0, 0, 0.15);
+    --elements-border-color: #E7E9FC;
+    --active-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    --card-shadow-color : 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    --card-set-gap-left: 24px;
+    --card-set-gap-top :48px;
 }
    
 /* HOME PAGE */  /* HOME PAGE */ /* HOME PAGE */ /* HOME PAGE */ /* HOME PAGE */ /* HOME PAGE */ 
@@ -33,8 +38,54 @@ body{
 }
 .list{
     list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul{
+    padding:0;
+}
+.none{
+    display: none;
+}
+
+.section{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.container{
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header */
+
+
+
+header{
+    border-bottom: 1px solid var(--elements-border-color)
+}
+
+
+.head.container{
+    display: flex;
+
+    align-items: center;
+}
 /* логотип */
 
 /* кусочек логотипа STUDIO */
@@ -51,28 +102,52 @@ body{
     font-size: 18px;
     line-height: 1.17; 
     letter-spacing: 0.03em;
+   
+ 
 }
+
+
 
 /* навигация */
 /* обшие стили для навигации */
 .site-nav{
-
+ display: flex;
+ align-items: center;
+ 
  font-weight: 500;
  font-size: 16px;
  line-height: 1.5;
  letter-spacing: 0.02em;
  color:var(--secondary-bg-color);
+ 
+
 }
 /* общие стили для списка ссылок */
 .site-nav.list{
     letter-spacing: 0.02em;
+    display: flex;
+    margin-left:76px
+   
 }
+
+
+
+.site-nav .item + .item{
+    margin-left:40px;
+}
+
 /* стиль для текста ссылок */
 .site-nav.text{
+    display:block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    
+   
     
     
 }
@@ -86,8 +161,23 @@ body{
 /* контактная информация */
 
 /* общие стили для контактной информации */
+
 .cont-info{
+    
+    margin-left:auto;
     font-style: normal;
+   
+}
+
+
+.cont-info>.list{
+    align-items: center;
+    display:flex;
+}
+
+.cont-info .item + .item{
+    margin-left:40px;
+
 }
 /* стили для текста контактной информации */
 .cont-info.text{
@@ -96,6 +186,8 @@ body{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+     padding-top: 24px;
+    padding-bottom: 24px;
 
 }
 
@@ -107,24 +199,33 @@ body{
 }
 
 
+
 /* оснойвной контент */
 
 /* секция 1 */
 .main-header{
     background-color: var(--secondary-bg-color);
     text-align: center;
+
+    /* padding-top: 188px;
+    padding-bottom: 188px; */
+    
 }
 
 .main-header.tittle{
+    width: 496px;
+    margin: 0 auto;
     color: var(--primary-bg-color);
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing:0.02em;
+    padding-bottom: 48px;
     
 }
 
 .order-button{
+    display: inline-block;
     cursor:pointer;
     background-color: var(--accent);
     color:var(--primary-bg-color);
@@ -133,7 +234,12 @@ body{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    
+    text-align: center;
+    padding: 16px 32px 16px 32px;
+    background: #4D5AE5;
+    box-shadow: var(--button-shadow-color);
+    border-radius: 4px;
+    min-width: 169px;
 }
 
 .order-button:hover,.order-button:focus{
@@ -142,6 +248,14 @@ background-color:var(--accent-two);
 
 
 /* секция 2 */
+ .feauters-list{
+    display: flex;
+ }
+
+ .feauters-list .item + .item{
+    margin-left:24px
+ }
+
 
 .feauters-card.tittle{
     color: var(--primary-text-color);
@@ -149,6 +263,7 @@ background-color:var(--accent-two);
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .feauters-card.text{
@@ -161,6 +276,10 @@ background-color:var(--accent-two);
 
 /* секция 3 */
 
+.projects.section{
+    padding-top:0;
+}
+
 .projects.tittle{ 
     color: var(--primary-text-color);
     font-weight: 700;
@@ -169,10 +288,25 @@ background-color:var(--accent-two);
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    padding-bottom: 72px;
+}
+
+.projects.list{
+    display:flex;
+}
+
+.projects.list .item + .item{
+
+    margin-left:24px;
 }
 
 /* секция 4 */
 
+.team{
+    
+  background-color: var(--third-bg-color);
+  
+}
 
 .team-tittle{
     color: var(--primary-text-color);
@@ -182,16 +316,31 @@ background-color:var(--accent-two);
     text-align: center;
     letter-spacing: 0.02em;
      text-transform: capitalize;
+     margin-bottom: 72px;
+
 }
 
+.team.list{
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
 
-.team{
-    
-  background-color: var(--third-bg-color);
 }
 
+.team-card-content + .team-card-content{
+    margin-left: 24px;
+}
+
+.team-photo{
+    display:block;
+    margin-bottom: 32px ;
+}
 .team-card-content{
+    text-align: center;
     background-color: var(--primary-bg-color);
+    box-shadow: var(--card-shadow-color);
+    border-radius: 0px 0px 4px 4px;
+    
 }
 
 .card-tittle{
@@ -200,7 +349,9 @@ background-color:var(--accent-two);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2; 
+    
      letter-spacing: 0.02em ;
+     margin-bottom: 8px;
 
 }
 
@@ -209,6 +360,8 @@ background-color:var(--accent-two);
     font-size: 16px ;
    line-height: 1.5;
    letter-spacing: 0.02em;
+  
+   margin-bottom: 32px;
 }
 
 
@@ -220,12 +373,23 @@ color:var(--third-bg-color);
 
 .footer{
     background-color: var(--secondary-bg-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
     
+}
+
+/* .footer.container{
+display:block;
+} */
+
+.footer-logo{
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 
 .footer-text{
-    
+    width: 264px;
    font-size: 16px;
    line-height: 1.5;
    letter-spacing: 0.02em ;
@@ -236,46 +400,123 @@ color:var(--third-bg-color);
 /* PAGE PORTFOLIO */ /* PAGE PORTFOLIO */ /* PAGE PORTFOLIO */ /* PAGE PORTFOLIO */
 
 
+
+
 /* фильтровые кнопки */
 
+.filtre-buttons.list{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+
+.filtre-buttons.list .item + .item{
+    margin-left: 24px;
+}
+
+
+
+/* галерея */
+
+
+.projects-card.list{
+   display:flex;
+   flex-wrap: wrap;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: -24px;
+    margin-top: -48px;
+    
+}
+
 .button{
+ display: inline-block;
 background-color: var(--third-bg-color);
 font-family: "Roboto", sans-serif;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
- letter-spacing: 0.04em ;
+letter-spacing: 0.04em ;
+text-align: center;
 color: var(--accent);
 cursor:pointer;
 text-align: center;
+padding: 12px 24px 12px 24px;
+border-radius: 4px;
+border: 1px solid var(--elements-border-color);
+min-width: 69px;
+
+
+
 }
 
 .button:hover,.button:focus{
      color: var(--primary-bg-color);
     background-color:var(--accent-two);
+    box-shadow: var(--active-button-shadow);
     
 }
 
 
 /* карточки-ссылки проектов */
-.project-card-content{
-    background-color: var(--primary-bg-color);
+
+
+.project-card-photo{
+    
+    display: block;
+    max-width: 100%;
+    margin-bottom: 32px;
 }
+
+.project-card-content{
+    flex-basis: calc(100% / 3 - var(--card-set-gap-left));
+    width: 360px;
+    
+
+    margin-left: var(--card-set-gap-left);
+    margin-top: var(--card-set-gap-top);
+    background-color: var(--primary-bg-color);
+   
+    
+}
+
+/* .project-card-content:nth-child(3n){
+    margin-right: 0;
+
+}
+ 
+
+.project-card-content:nth-last-child(-n+3){
+    margin-bottom: 0;
+} */
+
+
 
 
 .projects-tittle{
+   
     color: var(--primary-text-color);
      font-weight: 500;
     font-size: 20px;
     line-height: 1.2;  
      letter-spacing: 0.02em;
+     /* margin-left:16px;
+     margin-bottom:8px */
+     margin-bottom:8px
 
 }
 .projects-category {
+    
     color: var(--secondary-text-color);
     
    font-size: 16px;
    line-height: 1.5;
    letter-spacing: 0.02em;
+   /* margin-left: 16px;
+   margin-bottom: 32px; */
 
+}
+
+.card-info{
+    margin: 32px 54px 32px 16px;
 }
