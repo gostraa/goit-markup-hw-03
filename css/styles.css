@@ -31,32 +31,32 @@ body{
    
 }
 
-/* дефолтные классы */
+/* default classes */
+
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+   padding: 0;
+}
+
+
+ul{
+    padding: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 .link{
     text-decoration: none;
 }
 .list{
     list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-h1,h2,h3,h4,h5,h6{
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-p{
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-ul{
-    padding:0;
-}
-img{
-    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .visually-hidden { 
@@ -86,7 +86,10 @@ overflow: hidden;
     margin-right: auto;
 }
 
-/* header */
+
+
+
+/* HEADER */
 
 
 
@@ -100,15 +103,16 @@ header{
 
     align-items: center;
 }
-/* логотип */
 
-/* кусочек логотипа STUDIO */
+
+/* LOGO */
+
 .logo.part{
     color: var(--secondary-bg-color);
 }
 
-/* стили для всего логотипа */
-.logo{
+
+.logo-header{
     color:var(--accent);
     text-transform: uppercase;
     font-family: "Raleway", sans-serif;
@@ -123,8 +127,10 @@ header{
 
 
 
-/* навигация */
-/* обшие стили для навигации */
+/* NAVIGATION */
+
+/* COMMON STYLES FOR NAVIGATION */
+
 .site-nav{
  display: flex;
  align-items: center;
@@ -138,7 +144,11 @@ header{
  
 
 }
-/* общие стили для списка ссылок */
+
+
+/* COMMON STYLES FOR LINK LIST */
+
+
 .site-nav.list{
     letter-spacing: 0.02em;
     display: flex;
@@ -147,18 +157,14 @@ header{
    
 }
 
+ .site-nav-text:hover,.site-nav-text:focus{
+    color:var(--accent-two);
+}
 
 
-/* .site-nav .item + .item{
-    margin-left: 40px;
-} */
 
-/* .site-nav .item:last-child{
-    margin-right:0;
-} */
-
-/* стиль для текста ссылок */
-.site-nav.text{
+/* STYLE FOR BUTTONS TEXT */
+.site-nav-text{
     display:block;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -169,19 +175,12 @@ header{
     line-height: 1.5;
     
    
-    
-    
-}
-
-/* ховер и фокус для ссылок навигации  */
- .site-nav.text:hover,.site-nav.text:focus{
-    color:var(--accent-two);
 }
 
 
-/* контактная информация */
 
-/* общие стили для контактной информации */
+/* CONTACT INFIRMATION */
+
 
 .cont-info{
     
@@ -198,8 +197,7 @@ header{
 }
 
 
-/* стили для текста контактной информации */
-.cont-info.text{
+.cont-info-text{
     color: var(--secondary-text-colorcolor);
     
     font-size: 16px;
@@ -211,28 +209,24 @@ header{
 }
 
 
-/* ховер и фокус для ссылок контактной информации */
-
-.cont-info:hover,.cont-info:focus{
+.cont-info-text:hover,.cont-info-text:focus{
     color: var(--accent-two);
 }
 
 
 
-/* оснойвной контент */
+/* MAIN CONTENT */
 
-/* секция 1 */
-.main-header{
+/* SECTION 1 */
+.hero{
     background-color: var(--secondary-bg-color);
     text-align: center;
     padding: 188px 0;
 
-    /* padding-top: 188px;
-    padding-bottom: 188px; */
     
 }
 
-.main-header.tittle{
+.hero-tittle{
     max-width: 496px;
     
     margin: 0 auto;
@@ -241,7 +235,7 @@ header{
     font-size: 56px;
     line-height: 1.07;
     letter-spacing:0.02em;
-    padding-bottom: 48px;
+    margin-bottom: 48px;
     
 }
 
@@ -271,7 +265,8 @@ background-color:var(--accent-two);
 }
 
 
-/* секция 2 */
+/* SECTION 2 */
+
  .feauters-list{
     display: flex;
  }
@@ -285,7 +280,7 @@ background-color:var(--accent-two);
     margin-right:0px;
  }
 
-.feauters-card.tittle{
+.feauters-card-tittle{
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 20px;
@@ -294,7 +289,7 @@ background-color:var(--accent-two);
     margin-bottom: 8px;
 }
 
-.feauters-card.text{
+.feauters-card-text{
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.5 ;
@@ -302,13 +297,13 @@ background-color:var(--accent-two);
 
 }
 
-/* секция 3 */
+/* SECTION 3 */
 
 .projects.section{
     padding-top:0;
 }
 
-.projects.tittle{ 
+.projects-tittle{ 
     color: var(--primary-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -319,51 +314,42 @@ background-color:var(--accent-two);
     margin-bottom: 72px;
 }
 
-.projects.list{
+.projects-list{
     display:flex;
 }
 
-.projects.list .item{
+.projects-list .item{
 
     margin-right:24px;
 }
 
-.projects.list .item:last-child{
+.projects-list .item:last-child{
     margin-right: 0;
 }
 
-/* секция 4 */
+/* SECTION 4 */
 
 .team{
-    
   background-color: var(--third-bg-color);
-  
 }
 
 .team-tittle{
     color: var(--primary-text-color);
-   font-weight: 700;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.11;  
     text-align: center;
     letter-spacing: 0.02em;
-     text-transform: capitalize;
-     margin-bottom: 72px;
+    text-transform: capitalize;
+    margin-bottom: 72px;
 
 }
 
-.team.list{
+.team-list{
     display: flex;
-    /* padding-top: 0;
-    padding-bottom: 0;
-     */
 
 }
 
-
-.team-photo{
-    margin-bottom: 32px ;
-}
 
 
 .team-card-content{
@@ -387,20 +373,20 @@ background-color:var(--accent-two);
 
 .card-tittle{
     background-color: var(--primary-bg-color);
-     color:var(--primary-text-color);
+    color:var(--primary-text-color);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2; 
     text-align: center;
-     margin-bottom: 8px;
+    margin-bottom: 8px;
     letter-spacing: 0.02em ;
     
 
 }
 
 .card-text {
-    color:var(--secondary-text-color);
-    font-size: 16px ;
+   color:var(--secondary-text-color);
+   font-size: 16px ;
    line-height: 1.5;
    letter-spacing: 0.02em;
    text-align: center;
@@ -409,11 +395,9 @@ background-color:var(--accent-two);
 }
 
 
-    /* футер */
-.logo.part-footer{
-color:var(--third-bg-color);
+    /* footer */ /* footer */ /* footer */
 
-}
+
 
 .footer{
     background-color: var(--secondary-bg-color);
@@ -422,15 +406,23 @@ color:var(--third-bg-color);
     
 }
 
-/* .footer.container{
-display:block;
-} */
-
-.footer-logo{
+.logo-footer{
     display: inline-block;
     margin-bottom: 16px;
+    color:var(--accent);
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17; 
+    letter-spacing: 0.03em;
 }
 
+
+.logo-part-footer{
+color:var(--third-bg-color);
+
+}
 
 .footer-text{
     width: 264px;
@@ -446,7 +438,7 @@ display:block;
 
 
 
-/* фильтровые кнопки */
+/* filtre buttons */
 
 .projects-filtre{
     padding-top: 96px;
@@ -498,22 +490,13 @@ min-width: 69px;
 }
 
 
-
-
-
-
-
- .projects-card.list{
+ .projects-card{
    display:flex;
    flex-wrap: wrap;
     padding-top: 0;
     padding-bottom: 0;
-    /* margin-left: -24px;
-    margin-top: -48px; */
     column-gap: 24px;
     row-gap: 48px;
-
-
 
 }
 
@@ -526,37 +509,28 @@ min-width: 69px;
 }
 
 .project-card-content{
-    /* flex-basis: calc(100% / 3 - var(--card-set-gap-left)); */
-    /* width: 360px; */
-    width: calc((100% - 48px) / 3);
 
-    /* margin-left: var(--card-set-gap-left);
-    margin-top: var(--card-set-gap-top); */
+    width: calc((100% - 48px) / 3);
     background-color: var(--primary-bg-color);
    
-    
 }
 
 
 
-
-
-
-
-.projects-tittle{
+.project-tittle{
    
     color: var(--primary-text-color);
-     font-weight: 500;
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.2;  
-     letter-spacing: 0.02em;
+    letter-spacing: 0.02em;
      
-     margin-bottom:8px;
+    margin-bottom:8px;
 
 }
-.projects-category {
-    
-    color: var(--secondary-text-color);
+.project-category {
+
+   color: var(--secondary-text-color);
     
    font-size: 16px;
    line-height: 1.5;
@@ -566,8 +540,8 @@ min-width: 69px;
 }
 
 .card-info{
+
     padding: 32px 16px 32px 16px;
-    
     
     border: 1px solid var(--elements-border-color);
    
